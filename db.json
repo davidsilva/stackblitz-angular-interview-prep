@@ -1,0 +1,26 @@
+{
+    "users": [{
+        "id": 0,
+        "firstName": "Artie",
+        "lastName": "Schermerhorn",
+        "email": "aschermerhorn@bobandray.com"
+    },
+    {
+        "id": 1,
+        "firstName": "Mary",
+        "lastName": "Backstayge",
+        "email": "mbackstayge@bobandray.com"
+    },
+    {
+        "id": 2,
+        "firstName": "Harry",
+        "lastName": "Backstayge",
+        "email": "hbackstayge@bobandray.com"
+    },
+    {
+        "id": 3,
+        "firstName": "Calvin",
+        "lastName": "Hoogavin",
+        "email": "choogavin@bobandray.com"
+    }
+]}
