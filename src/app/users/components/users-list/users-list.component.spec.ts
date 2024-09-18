@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppTextFieldComponent } from './app-text-field.component';
+import { UsersListComponent } from './users-list.component';
 
-describe('AppTextFieldComponent', () => {
-  let component: AppTextFieldComponent;
-  let fixture: ComponentFixture<AppTextFieldComponent>;
+describe('UsersListComponent', () => {
+  let component: UsersListComponent;
+  let fixture: ComponentFixture<UsersListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppTextFieldComponent]
+      imports: [UsersListComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AppTextFieldComponent);
+    fixture = TestBed.createComponent(UsersListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
