@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { UsersService } from "./services/users.service";
 import { User } from "./models/user.model";
-import { Observable, of } from "rxjs";
+import { Observable, filter, of, map } from "rxjs";
 import { CommonModule } from "@angular/common";
 
 @Component({
@@ -16,8 +16,14 @@ export class AppComponent implements OnInit {
 
     title = "My Angular App"
     users$: Observable<User[]> = of([]);
+    activeUsers$: Observable<User[]> = of([]);
 
     ngOnInit(): void {
         this.users$ = this.usersService.getUsers();
+
+        this.activeUsers$ = this.users$
+            .pipe(
+                map(users => users.filter(user => user.isActive))
+            )
     }
 }

@@ -1,13 +1,29 @@
 <h1>{{title}}</h1>
+<h2>Users</h2>
 <div *ngIf="users$ | async as users; else noUsers">
     <ul>
         <li *ngFor="let user of users">
             <h3>{{user.firstName}} {{user.lastName}}</h3>
             <p>{{user.email}}</p>
+            <p>Is Active? {{user.isActive}}</p>
+        </li>
+    </ul>
+</div>
+<h2>Active Users</h2>
+<div *ngIf="activeUsers$ | async as activeUsers; else noActiveUsers">
+    <ul>
+        <li *ngFor="let user of activeUsers">
+            <h3>{{user.firstName}} {{user.lastName}}</h3>
+            <p>{{user.email}}</p>
+            <p>Is Active? {{user.isActive}}</p>
         </li>
     </ul>
 </div>
 
 <ng-template #noUsers>
+    <p>No users found.</p>
+</ng-template>
+
+<ng-template #noActiveUsers>
     <p>No users found.</p>
 </ng-template>
