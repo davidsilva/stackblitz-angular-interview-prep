@@ -25,6 +25,10 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "paths": {
+      "@ui/*": ["src/app/shared/ui/*"],
+      "@core/*": ["src/app/core/*"]
+    }
   }
 }
